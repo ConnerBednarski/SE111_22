@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt| Calculator</title>
+</head>
+<body>
+
+    <h1>W6 | JS Calculator</h1>
+
+    <script>
+        var hourlyPay = Number(prompt("Enter the hourly pay: "));
+        var hoursWorked = Number(prompt("Enter the number of hours worked: "));
+        var taxRate = .2;
+
+        var grossPay = hourlyPay * hoursWorked;
+        grossPay = grossPay.toFixed(2);
+
+        var uncleSamShare = grossPay * taxRate;
+        uncleSamShare = uncleSamShare.toFixed(2);
+
+        var netPay = grossPay - uncleSamShare;
+        netPay = netPay.toFixed(2);
+
+        alert(`Gross pay: $${grossPay}\nUncle Sam's Share: $${uncleSamShare}\nNet Pay: $${netPay}`);
+
+        console.log(`Gross pay: $${grossPay}`);
+        console.log(`Uncle Sam's Share: $${uncleSamShare}`)
+        console.log(`Net Pay: $${netPay}`)
+    </script>
+    
+</body>
+</html>
