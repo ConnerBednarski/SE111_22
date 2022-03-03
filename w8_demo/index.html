@@ -41,6 +41,53 @@
         var associativePeople = []
         associativePeople['teacher'] = 'Katie'
         associativePeople['student'] = 'Conner'
+
+        var cars = []
+        cars[0] = [`MAKE`, `Ford`, `Chevy`, `Toyota`, `Honda`]
+        cars[1] = [`MODELS`, `F-150`, `Cavalier`, `Camry`, `Prelude`]
+        cars[2] = [`Years`, `2016`, `2006`, `1999`, `1994`]
+
+        console.log(`KT's favorite childhood car was a ${cars[1][4]}`)
+
+        var person1 = {
+            first: `Katie`,
+            last: `Truchon`,
+            age: 32,
+            hasPets: true,
+            classes: [`SE111`, `VGD129`, `GMW251`],
+            pets: {dogs: [`George`, `Marlow`], cats: [`Jack`], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}
+        }
+
+        console.log(person1)
+        console.log(person1.first)
+        console.log(person1.pets.dogs[0])
+        person1.father = `Marty`
+        console.log(person1.father)
+
+        person1.pets.birds.push(`Tweetie`)
+        console.log(person1.pets.birds)
+
+        person1.greeting()
+
+        var person2 = {
+            first: `Antonio`,
+            last: `Martinez`,
+            age: 34,
+            hasPets: true,
+            classes: [`SE111`],
+            pets: {dogs: [], cats: [`Tadej`], birds: []},
+            greeting: function(){alert(`hi there ${this.first} ${this.last}`)}
+        }
+        
+        person2.greeting();
+
+        for(let key in person1)
+        {
+            console.log(`${key}: ${person1[key]}`)
+        }
+
+        
     </script>
 </body>
 </html>
