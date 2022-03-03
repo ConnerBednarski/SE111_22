@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>W8 Demo | Javascript Arrays & Objects</h1>
+
+    <div id="output">
+
+
+    </div>
+
+    <script>
+
+        var people = ['Katie','Conner','Zach','Stephan','Cody', 'Amara', 'Olivia']
+        console.log(people)
+        console.log(people[3]);
+        console.log(`There are ${people.length} values in he 'people' array.`)
+
+        var newArray = []
+        people[7] = "Rimsha";
+        people.push('Mike')
+
+        var name = 'James'
+        people.push(name);
+
+        var colors = ['grey', 'blue', 'red', 'green', 'black', 'turquoise', 'purple', 'n/a', 'n/a', 'n/a'];
+
+        var classHTML = []
+
+        for (let i = 0; i < people.length; i++)
+        {
+            console.log(`#${i} : ${people[i]}'s favorite color is ${colors[i]}`)
+            classHTML.push('SE111.22')
+        }
+
+        var associativePeople = []
+        associativePeople['teacher'] = 'Katie'
+        associativePeople['student'] = 'Conner'
+    </script>
+</body>
+</html>
