@@ -37,10 +37,10 @@
 				var p = document.createElement(`p`);
 				var text = document.createTextNode(people[i][key]);
 
-				p.append(text);
-				tempDiv.append(p);
+				p.appendChild(text);
+				tempDiv.appendChild(p);
 			}
-			body.append(tempDiv);
+			body.appendChild(tempDiv);
 		}
 		
 		
