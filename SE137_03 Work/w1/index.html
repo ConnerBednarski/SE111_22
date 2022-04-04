@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Conner Bednarski">
+    <meta name="description" content="Week 1 Bio">
+    <title>CSS | W1 BIO</title>
+
+    <style>
+
+        #header{
+            color:green;
+        }
+
+        #main h2{
+            color:red;
+        }
+
+        body {
+            background-color:lightblue;
+        }
+
+        .hide {
+            display:none;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Conner Bednarski</h1>
+    </div>
+
+    <hr>
+
+    <div id="nav">
+        <a href="#bio" id="bio-link">Bio</a>
+        <a href="#ed" id="ed-link">Education</a>
+        <a href="#hobbies" id="hobbies-link">Hobbies</a>
+    </div>
+
+    <hr>
+
+    <div id="main">
+
+        <div id="bio">
+            <h2>My Bio</h2>
+            <img src="C:\Users\cbedn\Desktop\SE111_22\SE111_22\SE137_03 Work\w1\images\47858355-education-concept-books-and-textbooks-on-the-bookshelf-3d.webp" alt="Bookshelf image" width="100px" height="100px">
+            <p>My name is <b>Conner Bednarski</b>. I am 19 years old attending <em>New England Institute of Technology</em>.</p>
+            <p>I'm not really sure what to write here, my life isn't really that interesting. It's usually just a cycle of waking up, going to school, going to work, going to sleep, and reading at the breaks in between.</p>
+        </div>
+
+        <hr>
+
+        <div id="ed" class="hide">
+            <h2>Schooling</h2>
+            <ul>
+                <li>Tiogue Elementary School</li>
+                <li>Alan Shawn Feinstien Middle School</li>
+                <li><a href="https://www.coventryschools.net/1/home" target="_blank">Coventry High School</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div id="hobbies" class="hide">
+            <h2>Hobbies/Interests</h2>
+            <ol>
+                <li><strong>Writing</strong></li>
+                <li><i>Reading</i></li>
+                <li>Programming</li>
+            </ol>
+            <img src="C:\Users\cbedn\Desktop\SE111_22\SE111_22\SE137_03 Work\w1\images\Writing.jpg" alt="Writing Image" width="100px" height="100px">
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div id="footer">
+        <p>&copy;2020 Conner Bednarski | W1 Assignment</p>
+    </div>
+
+    <script>
+        
+       var links = document.querySelectorAll(`a`);
+       var divs = document.querySelectorAll(`div`);
+
+       links[0].addEventListener(`click`, (e)=>{
+           e.preventDefault();
+
+           divs[3].classList.remove(`hide`);
+           divs[4].classList.add(`hide`);
+           divs[5].classList.add(`hide`);
+       })
+
+       links[1].addEventListener(`click`, (e)=>{
+           e.preventDefault();
+
+           divs[3].classList.add(`hide`);
+           divs[4].classList.remove(`hide`);
+           divs[5].classList.add(`hide`);
+       })
+
+       links[2].addEventListener(`click`, (e)=>{
+           e.preventDefault();
+
+           divs[3].classList.add(`hide`);
+           divs[4].classList.add(`hide`);
+           divs[5].classList.remove(`hide`);
+       })
+
+
+        
+    </script>
+
+</body>
+</html>
