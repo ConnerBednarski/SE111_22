@@ -1,0 +1,65 @@
+#header{
+    color:green;
+    text-align: center;
+}
+
+#main h2{
+    color:red;
+    text-align: center;
+}
+
+body {
+    background-color:lightblue;
+}
+
+.hide {
+    display:none;
+}
+
+#nav {
+    text-align: center;
+}
+
+#footer {
+    text-align: center;
+}
+
+.link-button {
+    padding: 20px;
+    display: inline-block;
+    font-family: 'Oxygen', sans-serif
+}
+
+p {
+    font-family: 'Beau Rivage', cursive;
+    font-size: 40px;
+}
+
+ul, ol {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+a:link {
+    color:lightseagreen;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color:black;
+}
+
+a:active {
+    color: blue;
+}
+
+a:link, a:visited {
+    background-color:lightseagreen;
+    color:white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block
+}
