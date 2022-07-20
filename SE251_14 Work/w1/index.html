@@ -9,20 +9,53 @@
 <body>
     <script>
 
-        body.addEventListener(`click`, function(){alert(`hi`)});
-        
+        //body.addEventListener(`click`, function(){alert(`hi`)});
+
         function add(_a=0, _b=0, func)
         {
             var c = _a + _b;
             func(c);
         }
 
+        
+
         //add(12, 12, function(c){console.log(c)})
         //add(12, 12, function(c){alert(c)})
 
-        fetch('http://example.com/movies.json')
-        .then(response => response.json())
-        .then(data => console.log(data));
+        fetch('https://www.fishwatch.gov/api/species')
+        .then(function(response) {return response.json()})
+        .then(function(data) {
+
+            console.log(data);
+            var body = document.querySelector(`body`);
+            var msg = ``;
+            var count = 0;
+
+            for(let i = 0; i < data.length; i++){
+                if(i%2==0)
+                {
+                    msg += `<div style=background-color:#bbb>`
+                }
+                else
+                {
+                    msg += `<div style=background-color:white>`
+                }
+                for(j in data[i])
+                {
+                    if(data[i][j] != null && typeof data[i][j] == `string`){
+                        msg += `${data[i][j]}<br>`;
+                    }
+                }
+                count++;
+                msg += `<hr>`;
+            }
+
+
+            //msg += `<img src="${data[1][`Species Illustration Photo`][`src`]}">`;
+            body.innerHTML = msg;
+            console.log(count);
+        
+        });
     </script>
 </body>
 </html>
